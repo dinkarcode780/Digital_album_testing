@@ -88,9 +88,9 @@ app.use("/api", blogRoute);
 app.use("/api", userslectedMediaRoute);
 app.use("/api", subscriptionRoute);
 
-app.use((req, res) => {
-  res.status(404).json({ success: false, message: "Route not found" });
-});
+// app.use((req, res) => {
+//   res.status(404).json({ success: false, message: "Route not found" });
+// });
 
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
